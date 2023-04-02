@@ -1,0 +1,18 @@
+{
+  "name": "chat-embeddings-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.2",
+    "@types/node": "^18.15.11",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "hnswlib-node": "^1.4.2",
+    "langchain": "^0.0.44"
+  }
+}

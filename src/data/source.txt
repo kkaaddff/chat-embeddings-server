@@ -1,0 +1,19 @@
+# Q & A
+
+## React Native
+
+### 报错 `Invalid hook call. Hooks can only be called inside of the body of ...`
+
+如果您使用了 `mobx` 包装了组件，例如 `export default inject('orderFreightStore')(observer(IndexPage))`, 并在组件中使用了 `react hook` 可能会导致类似问题。
+
+原因是由于模板默认的 `mobx` 版本，会将被包装的函数组件当作 `class` 组件的 `render` 调用。
+
+如果您有类似的使用场景，可以将 mobx 升级到最新版本（模板采用的版本对齐 `react native` 容器内置版本, 升级后会导致在 `react native` 端打包时无法选择拆基座模式）。
+
+### 使用 `position: absolute` 之后，在安卓下点击事件失效？
+
+在 android 里，若元素超过父元素，超出的部分无法触发点击事件。
+
+请使用其他布局方式替代，避免子元素超出父元素。
+
+### 安卓机型下，键盘弹起时会压缩页面，可以设置为不压缩吗？
